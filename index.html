@@ -1,36 +1,51 @@
 <!DOCTYPE html>
-<style>
-    div.backgr {
-        background-color: deepskyblue;
-        height: 100%;
-    }
-    div.textdiv {
-        width: 60%;
-        margin: auto;
-        background-color: beige;
-        border: 3px solid #73AD21;
-    }
-    p {
-        text-align: center;
-    }
-    h1  {
-        text-align: center;
-    }
-</style>
 <html>
     <head>
-        <title>Hello World</title>
+        <link rel="stylesheet" href="template.css">
+        <title>
+            Stefan's Website
+        </title>
     </head>
+
     <body>
-        <div class="backgr">
-            <div class="textdiv">
-                <h1>Hello World</h1>
-                <br />
-                <p>Sample Text</p>
-                <p>Sample Text</p>
-                <p>Sample Text</p>
-                <p>Sample Text</p>
+        <header> 
+            <div id="topbar">
+                <div class="logo">
+                    Stefan Nikolaj
+                </div>
+                <nav>
+                    <ul>
+                        <li> Home </li>
+                        <li> About </li>
+                        <li> Contact </li>
+                    </ul>
+                </nav>
             </div>
-        </div>    
+        </header>
+
+        <div class="box">
+            <div class="blog-post">
+                <div class="blog-heading">
+                    I'm Stefan and this is my website
+                </div>
+                <div class="blog-body">
+                    <p>
+                        There's nothing here yet, probably a blog will come soon
+                    </p>
+                </div>
+            </div>
+            <div class="sidebar">
+                <ul>
+                    <li>testing 1</li>
+                    <li>testing 2</li>
+                </ul>
+            </div>
+        </div>
+        <footer>	
+            <div id="footer">
+                <br /> <!--uses break because I'm too lazy to center it-->
+                <p>Hosted on Github Pages and made by me</p>
+            </div>
+        </footer>
     </body>
 </html>
