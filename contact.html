@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a href="index.html" target="_blank">Home</a>
+            <a href="#">Contact Me</a>
+            <a href="projects.html" onmouseover="choiceBar()" onmouseout="choiceBarRemove()" target="_blank">My Projects</a>
+            <a href="game.html" target="_blank">Play my game</a>
+        </div>
+
+        <div id="choicebar" onmouseover="choiceBar()">
+            <div class="topnav">
+                <a href="projects.html#project1" target="_blank">E-commerce search engine</a>
+                <a href="projects.html#project2" target="_blank">Wolfenstein 3D renderer</a>
+                <a href="projects.html#project3" target="_blank">Pong</a>
+                <a href="projects.html#project4" target="_blank">Poetry analyzer</a>
+                <a href="projects.html#project5" target="_blank">Synthesizer</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column third" style="margin-left: 5%; background-color: #bbb;">
+                <b>WARNING! This form does nothing because this is hosted with Github Pages, and there's no backend code for this website, only frontend. For actual contact read the things written right of here.</b>
+                <form>
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="resize: none;"></textarea>
+                
+                    <input type="submit" value="Submit">
+                  </form>
+            </div>
+
+            <div class="column third" style="background-color: #aaa; padding-left: 10px;">
+                <h2>Contact</h2>
+                <p>I am not very active on social media, but you can find me here:</p>
+                <ul>
+                    <li><a href="https://github.com/snikolaj">My Github</a></li>
+                    <li><a href="mailto:stefannikolaj@gmail.com">My Email</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCJxzNR_M2Urx6u30l7i-8uQ">My Youtube channel</a></li>
+                </ul>
+            </div>
+
+            <div class="column third" style="margin-right: 5%; background-color: #bbb; padding-left: 10px;">
+                <h2>Feel like the online world is too dangerous? You can physically find me here, or call me maybe</h2>
+                <p>This part is fake for obvious reasons</p>
+                <ul>
+                    <li>Fake Address 123</li>
+                    <li>Fake Phone Number: +123 456 7890</li>
+                    <li>There's no way I'm telling you which school I go to or have gone to</li>
+                    <li>I won't even tell you the city I live in</li>
+                </ul>
+            </div>
+        </div>
+
+        <script src="javascript/choicebar.js"></script>
+        <script src="javascript/resizethirds.js"></script>
+    </body>
+</html>

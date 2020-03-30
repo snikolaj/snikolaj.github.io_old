@@ -1,49 +1,73 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100' rel='stylesheet' type='text/css'>
-<link href="style.css" type="text/css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="header">
-      <div class="container">
-        <h1>It's a me, Stefan&nbsp;</h1>
-        <p>Freshman in high school</p>
-        <a class="btn" href="game.html">Learn More (WIP)</a>
-      </div>
-    </div>
+    <head>
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
 
-    <div class="nav">
-      <div class="container">
-        <ul>
-          <li>Projects (not many for now)</li>
-          <li>About</li>
-          <li>Contact me</li>
-        </ul>
-      </div>
-    </div>
+    <body>
+        <div class="topnav">
+            <a href="#">Home</a>
+            <a href="contact.html" target="_blank">Contact Me</a>
+            <a href="projects.html" onmouseover="choiceBar()" onmouseout="choiceBarRemove()" target="_blank">My Projects</a>
+            <a href="game.html" target="_blank">Play my game</a>
+        </div>
 
-    <div class="main">
-      <div class="container">
-        <img src="https://img.pokemondb.net/artwork/large/rattata.jpg" height="170" width="196">
-        <h2>About me</h2>
-        <p>Lorem ipsum</p>
-        <p>bla bla</p>
-        <p>nobody reads this anyway</p>
-      </div>
-    </div>
+        <div id="choicebar" onmouseover="choiceBar()">
+            <div class="topnav">
+                <a href="projects.html#project1" target="_blank">E-commerce search engine</a>
+                <a href="projects.html#project2" target="_blank">Wolfenstein 3D renderer</a>
+                <a href="projects.html#project3" target="_blank">Pong</a>
+                <a href="projects.html#project4" target="_blank">Poetry analyzer</a>
+                <a href="projects.html#project5" target="_blank">Synthesizer</a>
+            </div>
+        </div>
 
-    <div class="jumbotron">
-      <div class="container">
-        <h2>Stay Connected With Me</h2>
-        <a class="btn" href="#">Contact me</a>
-      </div>
-    </div>
+        <div id="main">
+            <div id="aboutme">
+                <img id="mainimage" src="img/imageofcode.jpg">
+                <div class="centered-text">
+                    <h1>Stefan Nikolaj</h1>
+                    <h7>web developer, game developer</h7>
+                    <br>
+                    <br>
+                    <a href="#row" style="font-size: 16px;">About me</a>
+                </div>
+            </div>
 
-    <div class="footer">
-      <div class="container">
-        <p>&copy; shamelessly stolen from Codecademy</p>
-      </div>
-    </div>
-  </body>
+            <div id="row">
+                <div class="column left" style="background-color:#aaa;">
+                    <em class="paragraph-title">Contact me:</em>
+                    <p>Contact me anywhere, anytime, and I will respond in a very short time period! <br> Contact info can be found <a href="contact.html" target="_blank">here</a></p>
+                </div>
+                <div class="column middle" style="background-color:#bbb;">
+                    <em class="paragraph-title">About me:</em>
+                    <p>I'm Stefan Nikolaj and I love making things! I love programming and I'm always looking for a new challenge. I have experience with C++, Java, Python, Javascript and HTML + CSS.
+                       I can use the Linux terminal and generally know my way around every operating system. My main hobbies are programming and gaming, but I also love military history and math.
+                       <br>
+                       <br>
+                       All the programming I know has been self-taught, and I've found out that I am able to very quickly adapt to a new programming language and environment. My programming style is
+                       heavily object-oriented, as can be seen from my projects. My contact info and projects are on the website, so contact me!
+                    </p>
+                </div>
+                <div class="column right" style="background-color:#aaa;">
+                    <em class="paragraph-title">My projects:</em>
+                    <ul>
+                        <li><a href="projects.html#project1" target="_blank">E-commerce search engine</a></li>
+                        <li><a href="projects.html#project2" target="_blank">Wolfenstein 3D renderer</a></li>
+                        <li><a href="projects.html#project3" target="_blank">Pong</a></li>
+                        <li><a href="projects.html#project4" target="_blank">Poetry analyzer</a></li>
+                        <li><a href="projects.html#project5" target="_blank">Synthesizer</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Made by Stefan Nikolaj. Hosted with GitHub Pages.</p>
+        </div>
+
+        <script src="javascript/choicebar.js"></script>
+    </body>
 </html>

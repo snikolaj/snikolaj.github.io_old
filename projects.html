@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<style>
+    img{
+        max-height: 300px;
+    }
+    div {
+        max-height: 300px;
+    } /* this is because everyting gets messed up by auto resizing for some reason... */
+</style>
+
+
+
+<html>
+    <head>
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a href="index.html" target="_blank">Home</a>
+            <a href="contact.html" target="_blank">Contact Me</a>
+            <a href="#" onmouseover="choiceBar()" onmouseout="choiceBarRemove()">My Projects</a>
+            <a href="game.html" target="_blank">Play my game</a>
+        </div>
+
+        <div id="choicebar" onmouseover="choiceBar()">
+            <div class="topnav">
+                <a href="#project1" target="_blank">E-commerce search engine</a>
+                <a href="#project2" target="_blank">Wolfenstein 3D renderer</a>
+                <a href="#project3" target="_blank">Pong</a>
+                <a href="#project4" target="_blank">Poetry analyzer</a>
+                <a href="#project5" target="_blank">Synthesizer</a>
+            </div>
+        </div>
+
+        
+        <div class="row" id="project1">
+            <div class="column third" style="margin-left: 5%; background-color: beige; float: left;"><img class="projectimg" src="img/p3r5SE.png"></div>
+            <div class="column twothird" style="margin-right: 5%; background-color: white; float: right;">
+                <em class="paragraph-title">Application for e-commerce webscraping and sorting</em>
+                <p>This application uses a Python script to webscrape information about the 50 newest PC parts on the two most popular Macedonian e-commerce platforms, and then lists all the information in an Electron.js application. 
+                   It then uses another custom Python script to turn the cyrillic letters into latin, and then the result is piped into the program through a bash script. The results are then edited and sent to the frontend with NodeJS, 
+                   where they are again edited with Javascript and displayed on an HTML and CSS frontend.</p>
+                <p>Technologies used:</p>
+                <ul>
+                    <li>Python</li>
+                    <li>Javascript and NodeJS</li>
+                    <li>HTML and CSS</li>
+                    <li>Electron.js</li>
+                </ul>
+            </div>
+        </div> 
+        
+        <div class="row" id="project2">
+            <div class="column twothird" style="margin-left: 5%; background-color: white;">
+                <em class="paragraph-title">Wolfenstein 3D renderer</em>
+                <p>A renderer based on the classic game Wolfenstein 3D. It is a basic 3D renderer with some game-like elements like collectibles and destructible terrain. 
+                   It uses raycasting for the 3D rendering algorithm, and is rendered using the Processing3D Java graphics library.</p>
+                   <br>
+                   <b>PLAY IT <a href="game.html" target="_blank">HERE</a> (completely remade in Javascript!)</b>
+                <p>Technologies used:</p>
+                <ul>
+                    <li>Java</li>
+                    <li>Processing3D</li>
+                </ul>
+            </div>
+            <div class="column third" style="margin-right: 5%; background-color: beige;"><img class="projectimg" src="img/w3dclone.png"></div>
+        </div>
+
+        <div class="row" id="project3">
+            <div class="column third" style="margin-left: 5%; background-color: beige;"><img class="projectimg" src="img/pongclone.png"></div>
+            <div class="column twothird" style="margin-right: 5%; background-color: white;">
+                <em class="paragraph-title">Pong clone</em>
+                <p>A simple clone of the classic game Pong made with Java and the Processing3D graphics library. It's just Pong.</p>
+                <p>Technologies used:</p>
+                <ul>
+                    <li>Java</li>
+                    <li>Processing3D</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row" id="project4">
+            <div class="column twothird" style="margin-left: 5%; background-color: white;">
+                <em class="paragraph-title">Poetry analyzer</em>
+                <p>An application that analyzes poetry and displays information like meter, syllable count per line and stress for each syllable. 
+                   The analysis is done with <a href="http://quadrismegistus.github.io/prosodic/" target="_blank">Prosodic</a> AI implemented in a Python script
+                   that is piped into a NodeJS backend where the output is processed and sent to the frontend where it is displayed with HTML and CSS in an Electron.js application.</p>
+                <p>Technologies used:</p>
+                <ul>
+                    <li>Python</li>
+                    <li>Javascript and NodeJS</li>
+                    <li>HTML and CSS</li>
+                    <li>Electron.js</li>
+                </ul>
+            </div>
+            <div class="column third" style="margin-right: 5%; background-color: beige;"><img class="projectimg" src="img/poetryanalyzer.png"></div>
+        </div>
+        
+        <div class="row" id="project5">
+            <div class="column third" style="margin-left: 5%; background-color: beige;"><img class="projectimg" src="img/synthesizer.png"></div>
+            <div class="column twothird" style="margin-right: 5%; background-color: white;">
+                <em class="paragraph-title">Tiny synth</em>
+                <p>A small synthesizer that takes in keyboard input and can play 10 notes. Made with Java and the Processing3D graphics library.</p>
+                <p>Technologies used:</p>
+                <ul>
+                    <li>Java</li>
+                    <li>Processing3D</li>
+                </ul>
+            </div>
+        </div>
+
+        <script src="javascript/choicebar.js"></script>
+    </body>
+</html>
