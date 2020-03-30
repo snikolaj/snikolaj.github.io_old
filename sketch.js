@@ -103,6 +103,7 @@ var planeY;// FOV = 66
 var rayDirX;
 var rayDirY;
 
+var speedrun;
 //======= SETUP =======//
 
 function preload(){
@@ -115,7 +116,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(1366, 768, P2D); 
+  createCanvas(window.innerWidth, window.innerHeight, P2D); 
 
   mapWidth = 24;
   mapHeight = 24;
@@ -137,7 +138,7 @@ function setup() {
   dirY = 0.0;
   planeX = 0.0;
   planeY = 0.66;  // FOV = 66
-
+  speedrun = 0;
 
   worldMap = 
   [
@@ -241,7 +242,7 @@ function draw() {
 
   case 1: //BEGINNING OF CASE_1
     tickCounter += 1;
-
+    speedrun += 1 / getFrameRate();
     for (var i = 0; i < mapWidth; i++) {
       for (var j = 0; j < mapHeight; j++) {
         visitedMap[i][j] = 0;
@@ -455,7 +456,7 @@ function draw() {
     fill(255);
     rectMode(CORNER);
     text("Cans collected: " + cans, 125, 80);
-    
+    text("Current time: " + speedrun + " s", 600, 50);
     if (cans == canCount){
       mode = 2; 
     }
@@ -542,11 +543,7 @@ function draw() {
      cursor();
      fill(255);
      text("YOU WON\nYOU COLLECTED ALL 3 CANS\nGOOD JOB", width / 2, 200);
-     
-     var btnQuit;
-     btnQuit = new Button("PRESS ESC TO QUIT", width / 2, height / 2, 300, 100);
-     btnQuit.drawButton();
-
+     text("YOUR TIME WAS:" + speedrun, width / 2, 300);
      break; // END OF CASE_2
      
 
